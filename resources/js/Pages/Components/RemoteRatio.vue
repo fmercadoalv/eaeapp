@@ -22,7 +22,7 @@ export default defineComponent({
 
         const fetchData = async () => {
             try {
-                const response = await axios.get('');
+                const response = await axios.get('https://6cd638v190.execute-api.us-east-1.amazonaws.com/dev/radio');
                 const data = JSON.parse(response.data.data);
                 const labels = data.map(item => item.remote_type);
                 const values = data.map(item => item.remote_count);
